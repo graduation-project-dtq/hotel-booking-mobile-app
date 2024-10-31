@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="24dp"
+    app:cardElevation="8dp"
+    app:cardBackgroundColor="@android:color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="24dp">
+
+        <TextView
+            android:id="@+id/MaHoaDon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Hóa đơn đặt phòng: 123456789"
+            android:textColor="@color/accent_color"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/MaHoaDon" />
+
+
+
+        <androidx.constraintlayout.widget.Barrier
+            android:id="@+id/barrier"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:barrierDirection="bottom"
+            app:constraint_referenced_ids="divider,divider" />
+
+        <TextView
+            android:id="@+id/labelNgayDat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Ngày đặt"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/barrier" />
+
+        <TextView
+            android:id="@+id/ngaydat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2024-10-10"
+            android:textColor="@color/primary_text_color"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/labelNgayDat"
+            app:layout_constraintTop_toBottomOf="@id/labelNgayDat" />
+
+        <TextView
+            android:id="@+id/labelNgayDen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ngày đến"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@id/labelNgayDat" />
+
+        <TextView
+            android:id="@+id/ngayden"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2024-10-15"
+            android:textColor="@color/primary_text_color"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/labelNgayDen"
+            app:layout_constraintTop_toBottomOf="@id/labelNgayDen" />
+
+        <TextView
+            android:id="@+id/labelNgayDi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:text="Ngày đi"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/labelNgayDat" />
+
+        <TextView
+            android:id="@+id/ngaydi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2024-10-17"
+            android:textColor="@color/primary_text_color"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/labelNgayDi"
+            app:layout_constraintTop_toBottomOf="@id/labelNgayDi" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="189dp" />
+
+        <TextView
+            android:id="@+id/labelTongTien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Tổng tiền"
+            android:textColor="@color/secondary_text_color"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ngaydat" />
+
+        <TextView
+            android:id="@+id/TongTien"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5.000.000 VND"
+            android:textColor="@color/accent_color"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/labelTongTien"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/labelTongTien" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnXemChiTiet"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Xem chi tiết"
+            android:layout_marginTop="30dp"
+            app:iconTint="@color/primary_color"
+            android:textColor="@color/primary_color"
+            app:icon="@drawable/xemchitiet"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/TongTien"
+            app:strokeColor="@color/primary_color" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

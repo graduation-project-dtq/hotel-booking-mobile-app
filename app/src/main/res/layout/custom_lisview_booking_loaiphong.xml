@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="8dp"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/imagephong"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:shapeAppearanceOverlay="@style/RoundedImageView"/>
+
+        <TextView
+            android:id="@+id/Tenphong"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Phòng Deluxe"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/imagephong"
+            app:layout_constraintEnd_toStartOf="@id/buttonBookmark"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/buttonBookmark"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="130dp"
+            android:backgroundTint="@color/white"
+            android:padding="8dp"
+            android:layout_marginEnd="15dp"
+            app:cornerRadius="12dp"
+            app:icon="@drawable/bookmark1"
+            app:iconGravity="textStart"
+            app:iconSize="20dp"
+            app:iconTint="@color/colorAccent1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:strokeColor="@color/colorAccent1"
+            app:strokeWidth="2dp" />
+
+        <TextView
+            android:id="@+id/GiaPhong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="1.500.000đ / đêm"
+            android:textColor="@color/colorAccent1"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@id/Tenphong"
+            app:layout_constraintTop_toBottomOf="@id/Tenphong"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/SLKhach"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="2 khách"
+            app:tint="#4A90E2"
+            app:chipIcon="@drawable/customer"
+            app:layout_constraintStart_toStartOf="@id/GiaPhong"
+            app:layout_constraintTop_toBottomOf="@id/GiaPhong"/>
+
+        <com.google.android.material.button.MaterialButtonToggleGroup
+            android:id="@+id/toggleGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="@id/SLKhach"
+            app:layout_constraintTop_toBottomOf="@id/SLKhach"
+            app:singleSelection="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/icon1"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:strokeColor="@color/colorAccent"
+                android:text="-"
+                android:textColor="@color/colorAccent1"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/soLuong"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:strokeColor="@color/colorAccent"
+                android:text="0"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/icon2"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                app:strokeColor="@color/colorAccent"
+                android:text="+"
+                android:textColor="@color/colorAccent1"/>
+
+        </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

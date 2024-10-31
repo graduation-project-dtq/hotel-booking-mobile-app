@@ -1,0 +1,49 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/imageViewRoom"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:scaleType="centerCrop"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="16dp">
+
+        <TextView
+            android:id="@+id/textViewRoomType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phòng Deluxe"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/primary_text_color"/>
+
+        <TextView
+            android:id="@+id/textViewRoomDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2 người lớn, 1 trẻ em"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text_color"/>
+
+        <TextView
+            android:id="@+id/textViewRoomPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="750,000đ/đêm"
+            android:textSize="14sp"
+            android:textColor="@color/price_color"
+            android:layout_marginTop="4dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

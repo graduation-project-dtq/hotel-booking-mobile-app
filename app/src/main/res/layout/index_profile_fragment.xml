@@ -1,0 +1,592 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".Index">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <View
+                android:id="@+id/headerBackground"
+                android:layout_width="match_parent"
+                android:layout_height="260dp"
+                android:background="@drawable/profile_gradient"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <!-- Profile Image -->
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/imgProfile"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginTop="48dp"
+                android:padding="3dp"
+                android:background="@color/white"
+                android:scaleType="centerCrop"
+                android:src="@drawable/anh_nv"
+                app:shapeAppearanceOverlay="@style/CircleImageView"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Header Title -->
+            <TextView
+                android:id="@+id/txtFullName1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Thông Tin Cá Nhân"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/imgProfile"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Main Content Card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardViewProfileInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-32dp"
+                android:layout_marginHorizontal="16dp"
+                app:cardCornerRadius="24dp"
+                app:cardElevation="12dp"
+                app:layout_constraintTop_toBottomOf="@id/headerBackground">
+
+                <LinearLayout
+                    android:id="@+id/profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="24dp">
+
+                    <!-- Full Name Field -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:startIconDrawable="@drawable/user1"
+                        app:startIconTint="#4A90E2"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtFullName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="textPersonName"
+                            android:text="Trần Ngọc Thanh"
+                            android:textColor="@color/black"
+                         />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Email Field -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:startIconDrawable="@drawable/email1"
+                        app:startIconTint="#4A90E2"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="textEmailAddress"
+                            android:text="thanhtran.070103@gmail.com"
+                            android:textColor="@color/black"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Birthday Field -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:startIconDrawable="@drawable/gift1"
+                        app:startIconTint="#4A90E2"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtBirthday"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="date"
+                            android:text="07/01/2003"
+                            android:textColor="@color/black"
+                            />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Phone Field -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="16dp"
+                        app:startIconDrawable="@drawable/telephon1"
+                        app:startIconTint="#4A90E2"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtsdt"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="phone"
+                            android:text="0123456789"
+                            android:textColor="@color/black"
+                           />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Gender Field -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:startIconDrawable="@drawable/nam1"
+                        app:startIconTint="#4A90E2"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusBottomEnd="12dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtsex"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="text"
+                            android:text="Nam"
+                            android:textColor="@color/black"
+                           />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/LichSu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintTop_toBottomOf="@id/cardViewProfileInfo">
+
+                <!-- Booking History Header Card -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/switchNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="#E0E0E0"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:id="@+id/welcome_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/card_gradient_background"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="start|center_vertical">
+
+                            <ImageView
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_marginEnd="8dp"
+                                android:src="@drawable/commercial"
+                                app:tint="@color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Phiếu đặt phòng"
+                                android:textColor="@color/white"
+                                android:textSize="18sp"
+                               />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end|center_vertical"
+                            android:background="@drawable/button_background"
+                            android:paddingHorizontal="12dp"
+                            android:paddingVertical="8dp">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Xem lịch sử"
+                                android:textColor="@color/white"
+                                android:textSize="14sp"
+                                 />
+
+                            <ImageView
+                                android:id="@+id/Xemls"
+                                android:layout_width="20dp"
+                                android:layout_height="20dp"
+                                android:layout_marginStart="8dp"
+                                android:src="@drawable/next"
+                                app:tint="@color/white" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Booking Status Grid -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/cardViewBookingStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginTop="16dp"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="8dp">
+
+                    <GridLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:columnCount="3"
+                        android:padding="16dp"
+                        android:rowCount="2">
+
+                        <!-- Chờ xác nhận -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="8dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:background="@drawable/status_circle_background"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:id="@+id/Choxacnhan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/choxacnhan"
+                                    app:tint="#4A90E2" />
+
+                                <TextView
+                                    android:id="@+id/Choxacnhan_count"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|end"
+                                    android:background="@drawable/count_badge_background"
+                                    android:gravity="center"
+                                    android:text="0"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Chờ xác nhận"
+                                android:textAlignment="center"
+                                android:textColor="#333333"
+                                />
+                        </LinearLayout>
+
+                        <!-- Đã xác nhận -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="8dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:background="@drawable/status_circle_background"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:id="@+id/Daxacnhan"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/daxacnhan"
+                                    app:tint="#4CAF50" />
+
+                                <TextView
+                                    android:id="@+id/Daxacnhan_count"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|end"
+                                    android:background="@drawable/count_badge_background"
+                                    android:gravity="center"
+                                    android:text="0"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Đã xác nhận"
+                                android:textAlignment="center"
+                                android:textColor="#333333"
+                                />
+                        </LinearLayout>
+
+                        <!-- Yêu cầu hủy -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="8dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:background="@drawable/status_circle_background"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:id="@+id/Yeucauhuy"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/yeucauhuy"
+                                    app:tint="#FF9800" />
+
+                                <TextView
+                                    android:id="@+id/Yeucauhuy_count"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|end"
+                                    android:background="@drawable/count_badge_background"
+                                    android:gravity="center"
+                                    android:text="0"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Yêu cầu hủy"
+                                android:textAlignment="center"
+                                android:textColor="#333333"
+                                />
+                        </LinearLayout>
+
+                        <!-- Xác nhận hủy -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="8dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:background="@drawable/status_circle_background"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:id="@+id/Xacnhanhuy"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/xacnhanhuy"
+                                    app:tint="#F44336" />
+
+                                <TextView
+                                    android:id="@+id/Xacnhanhuy_count"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|end"
+                                    android:background="@drawable/count_badge_background"
+                                    android:gravity="center"
+                                    android:text="0"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Xác nhận hủy"
+                                android:textAlignment="center"
+                                android:textColor="#333333"
+                               />
+                        </LinearLayout>
+
+                        <!-- Đã checkin -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="8dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:background="@drawable/status_circle_background"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:id="@+id/Dacheckin"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/checkinhotel"
+                                    app:tint="#9C27B0" />
+
+                                <TextView
+                                    android:id="@+id/Dacheckin_count"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|end"
+                                    android:background="@drawable/count_badge_background"
+                                    android:gravity="center"
+                                    android:text="0"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Đã checkin"
+                                android:textAlignment="center"
+                                android:textColor="#333333"
+                                />
+                        </LinearLayout>
+
+                        <!-- Đã checkout -->
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_columnWeight="1"
+                            android:layout_margin="8dp"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <FrameLayout
+                                android:layout_width="64dp"
+                                android:layout_height="64dp"
+                                android:background="@drawable/status_circle_background"
+                                android:padding="12dp">
+
+                                <ImageView
+                                    android:id="@+id/Dacheckout"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:src="@drawable/checkouthotel"
+                                    app:tint="@color/colorAccent1" />
+
+                                <TextView
+                                    android:id="@+id/Dacheckout_count"
+                                    android:layout_width="20dp"
+                                    android:layout_height="20dp"
+                                    android:layout_gravity="top|end"
+                                    android:background="@drawable/count_badge_background"
+                                    android:gravity="center"
+                                    android:text="0"
+                                    android:textColor="#FFFFFF"
+                                    android:textSize="12sp"
+                                    android:visibility="gone" />
+                            </FrameLayout>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:text="Đã checkout"
+                                android:textAlignment="center"
+                                android:textColor="#333333"
+                                 />
+                        </LinearLayout>
+
+                    </GridLayout>
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnUpdateTTCN"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/colorAccent"
+                android:text="Cập nhật thông tin"
+                android:textSize="18sp"
+                app:cornerRadius="30dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/LichSu" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogout"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="16dp"
+                android:text="Đăng xuất"
+                android:textSize="18sp"
+                app:cornerRadius="30dp"
+                android:textColor="@color/red"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/btnUpdateTTCN" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

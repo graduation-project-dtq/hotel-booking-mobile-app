@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/home"
+        android:title="Trang chủ"
+        app:iconTint="@drawable/icon_tint_selector"
+        app:titleTextColor="@drawable/icon_tint_selector" />
+
+    <item
+        android:id="@+id/navigation_notification"
+        android:icon="@drawable/notification"
+        android:title="Thông báo"
+        app:iconTint="@drawable/icon_tint_selector"
+        app:titleTextColor="@drawable/icon_tint_selector" />
+
+    <item
+        android:id="@+id/navigation_booking"
+        android:icon="@drawable/booking"
+        android:title="Đặt phòng"
+        app:iconTint="@drawable/icon_tint_selector"
+        app:titleTextColor="@drawable/icon_tint_selector" />
+
+    <item
+        android:id="@+id/navigation_profile"
+        android:icon="@drawable/profile"
+        android:title="Cá nhân"
+        app:iconTint="@drawable/icon_tint_selector"
+        app:titleTextColor="@drawable/icon_tint_selector" />
+</menu>
